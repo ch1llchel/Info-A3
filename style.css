@@ -97,6 +97,12 @@ body {
     object-fit: cover;
     background-color: white;
     padding: 6px;
-    box-shadow: 0 0 5ox rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.cat span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
