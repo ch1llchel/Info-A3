@@ -221,5 +221,11 @@ body {
     font-size: 0.9rem;
 }
 
+.footer-icon{
+    height:24px;
+    width:24px;
+    object-fit:contain;
+}
+
 
 
