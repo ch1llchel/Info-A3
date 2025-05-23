@@ -126,6 +126,13 @@ body {
     padding: 0 1rem;
 }
 
+.item{
+    position:relative;
+    flex:1;
+    max-width: 33%;
+}
+
+
 
 
 
