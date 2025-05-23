@@ -198,5 +198,11 @@ body {
     width:100%;
 }
 
+.payment-strip {
+    height:38px;
+    object-fit: contain;
+}
+
+
 
 
