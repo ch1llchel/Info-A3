@@ -176,6 +176,14 @@ body {
     background:#444;
 }
 
+/*footer*/
+.site-footer {
+    background:white;
+    padding:3rem 1rem 0.5rem;
+    position: relative;
+}
+
+
 
 
 
