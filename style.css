@@ -137,6 +137,23 @@ body {
     height:auto;
 }
 
+.label{
+    positions: absolue;
+    bottom:95px;
+    left:50%;
+    transform:translateX(-50%);
+    background:black;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    font-style; italic;
+    padding: 0.8rem 1.2rem;
+    font size: 1rem;
+    border-radius: 4px;
+    widthe: max-content;
+    min-width: 160px;
+}
+
 
 
 
