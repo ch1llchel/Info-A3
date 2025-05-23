@@ -27,3 +27,12 @@ body {
     position: relative;
 }
 
+.logo-img{
+    height:85px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+}
