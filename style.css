@@ -172,7 +172,9 @@ body {
     min-width:160px;
 }
 
-
+.shop-btn:hover{
+    background:#444;
+}
 
 
 
