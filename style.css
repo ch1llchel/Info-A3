@@ -65,3 +65,9 @@ body {
     width:24px;
     object-fit:contain;
 }
+
+#currency{
+    font-weight:bold;
+    padding: 0.4rem;
+    font-size: 0.95rem;
+}
