@@ -45,3 +45,11 @@ body {
     cursor:pointer;
     z-index: 1;
 }
+
+/*search, cart, currency*/
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
