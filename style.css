@@ -183,6 +183,14 @@ body {
     position: relative;
 }
 
+.footer-wrapper{
+    max-width:1200ox;
+    margin:0 auto;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0rem;
+}
 
 
 
