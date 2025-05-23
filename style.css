@@ -192,7 +192,11 @@ body {
     gap:0rem;
 }
 
-
+.footer-center{
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
 
 
 
