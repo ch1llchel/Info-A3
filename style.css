@@ -15,3 +15,15 @@ body {
     font-size: 0.9rem;
     letter-spacing: 0.5px;
 }
+
+/*logo section*/
+.logo-section {
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    height: 80px;
+    position: relative;
+}
+
