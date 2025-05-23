@@ -119,5 +119,13 @@ body {
     padding-left: 1rem;
 }
 
+.collection-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+
 
 
