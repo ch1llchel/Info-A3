@@ -34,5 +34,14 @@ body {
     transform: translateX(-50%);
 }
 
-
+.shop-all {
+    background: black;
+    color:white;
+    font-weight: bold;
+    font-style: italic;
+    font-size:1.1rem;
+    padding:0.9rem q.6rem;
+    border: none;
+    cursor:pointer;
+    z-index: 1;
 }
