@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+checkout:<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Checkout - Melted Potato</title>
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -93,7 +92,7 @@
       padding: 2rem;
     }
 
-    checkout-left h2 {
+    .checkout-left h2 {
       margin-top: 1.5rem;
     }
 
@@ -154,8 +153,8 @@
       margin: 0.5rem 0;
     }
 
-  /* INLINE ALIGNMENT: label left, input right */
-  .inline-input-group {
+    /* INLINE ALIGNMENT: label left, input right */
+    .inline-input-group {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -174,125 +173,125 @@
     }
   </style>
 </head>
-
 <body>
 
-    <div class="top-bar">FREE EXPRESS SHIPPING</div>
-  
-    <header class="checkout-header">
-      <img src="images/logo.png" alt="Melted Potato Logo" class="checkout-logo" />
-      <div class="nav-bar">
-        <div class="nav-left"><a href="#">HOME</a></div>
-        <div class="nav-right">
-          <input type="text" placeholder="Search..." />
-          <img src="images/cart.jpeg" class="cart-icon" />
-          <select>
-            <option>AUD$</option>
-          </select>
-        </div>
-      </div>
-    </header>
-  
-    <div class="checkout-steps">
-        <strong>1. SHIPPING</strong> → <strong>2. PAYMENT</strong> → <strong>3. ORDER CONFIRMATION</strong>
-      </div>
-    
-      <div class="checkout-container">
-        <!-- LEFT SIDE -->
-        <div class="checkout-left">
-            <h2>Contact</h2>
-            <input type="email" placeholder="Email" />
-            <div class="inline-input-group">
-              <label for="news">email me with news and offers</label>
-              <input type="checkbox" id="news" />
-            </div>
-      
-            <h2>Shipping address</h2>
-            <select><option>AUSTRALIA</option></select>
-            <div class="name-row">
-              <input type="text" placeholder="First name (optional)" />
-              <input type="text" placeholder="Last name" />
-            </div>
-            <input type="text" placeholder="Address" />
-            <div class="city-row">
-              <input type="text" placeholder="City" />
-              <input type="text" placeholder="State/Territory" value="VICTORIA" />
-              <input type="text" placeholder="Postcode" />
-            </div>
-      
-            <h2>Payment</h2>
-            <p>All transactions are secure and encrypted.</p>
-            <div class="inline-input-group">
-              <label for="credit">Credit card</label>
-              <input type="radio" name="payment" id="credit" checked />
-            </div>
-            <img src="images/payment-icons.png" alt="Payment Methods" class="payment-icons" />
-            <input type="text" placeholder="Card number" />
-            <div class="card-details">
-              <input type="text" placeholder="Expiration date (MM / YY)" />
-              <input type="text" placeholder="Security code" />
-            </div>
-            <input type="text" placeholder="Name on card" />
-      
-            <div class="inline-input-group">
-              <label for="billing">Use shipping address as billing address</label>
-              <input type="checkbox" id="billing" checked />
-            </div>
-      
-            <div class="inline-input-group">
-              <label for="paypal">PayPal</label>
-              <input type="radio" name="payment" id="paypal" />
-            </div>
-      
-            <div class="inline-input-group">
-              <label for="shop">ShopPay</label>
-              <input type="radio" name="payment" id="shop" />
-            </div>
-      
-            <form action="confirmation.html" method="get" style="text-align: center;">
-              <button type="submit" style="
-                width: 90%;
-                padding: 1rem;
-                font-size: 2rem;
-                font-weight: bold;
-                background-color: white;
-                color: black;
-                cursor: pointer;
-                margin: 1rem auto;
-                display: block;
-              ">
-                Pay now
-              </button>
-            </form>
-            
-            <!-- RIGHT SIDE -->
-    <div class="checkout-right">
-        <div class="summary-item">
-          <img src="images/earing.jpeg" />
-          <div>
-            <p><strong>WINTER GRAPES</strong></p>
-            <p>$279.00</p>
-          </div>
-        </div>
-        <div class="summary-item">
-          <img src="images/bracelet.jpeg" />
-          <div>
-            <p><strong>DOUBLE GRAPE</strong></p>
-            <p>$190.00</p>
-          </div>
-        </div>
-        <div class="summary-totals">
-          <p><strong>Subtotal</strong> <span>$469.00</span></p>
-          <p><strong>Shipping</strong> <span>$0.00</span></p>
-          <h3>Total <span>$469.00</span></h3>
-        </div>
+  <div class="top-bar">FREE EXPRESS SHIPPING</div>
+
+  <header class="checkout-header">
+    <img src="images/logo.png" alt="Melted Potato Logo" class="checkout-logo" />
+    <div class="nav-bar">
+      <div class="nav-left"><a href="#">HOME</a></div>
+      <div class="nav-right">
+        <input type="text" placeholder="Search..." />
+        <img src="images/cart.jpeg" class="cart-icon" />
+        <select>
+          <option>AUD$</option>
+        </select>
       </div>
     </div>
+  </header>
 
-    <script>
-        const cart = JSON.parse(localStorage.getItem("cart")) || [];
-        const summaryContainer = document.querySelector('.checkout-right');
+  <div class="checkout-steps">
+    <strong>1. SHIPPING</strong> → <strong>2. PAYMENT</strong> → <strong>3. ORDER CONFIRMATION</strong>
+  </div>
 
+  <div class="checkout-container">
+    <!-- LEFT SIDE -->
+    <div class="checkout-left">
+      <h2>Contact</h2>
+      <input type="email" placeholder="Email" />
+      <div class="inline-input-group">
+        <label for="news">email me with news and offers</label>
+        <input type="checkbox" id="news" />
+      </div>
+
+      <h2>Shipping address</h2>
+      <select><option>AUSTRALIA</option></select>
+      <div class="name-row">
+        <input type="text" placeholder="First name (optional)" />
+        <input type="text" placeholder="Last name" />
+      </div>
+      <input type="text" placeholder="Address" />
+      <div class="city-row">
+        <input type="text" placeholder="City" />
+        <input type="text" placeholder="State/Territory" value="VICTORIA" />
+        <input type="text" placeholder="Postcode" />
+      </div>
+
+      <h2>Payment</h2>
+      <p>All transactions are secure and encrypted.</p>
+      <div class="inline-input-group">
+        <label for="credit">Credit card</label>
+        <input type="radio" name="payment" id="credit" checked />
+      </div>
+      <img src="images/payment-icons.png" alt="Payment Methods" class="payment-icons" />
+      <input type="text" placeholder="Card number" />
+      <div class="card-details">
+        <input type="text" placeholder="Expiration date (MM / YY)" />
+        <input type="text" placeholder="Security code" />
+      </div>
+      <input type="text" placeholder="Name on card" />
+
+      <div class="inline-input-group">
+        <label for="billing">Use shipping address as billing address</label>
+        <input type="checkbox" id="billing" checked />
+      </div>
+
+      <div class="inline-input-group">
+        <label for="paypal">PayPal</label>
+        <input type="radio" name="payment" id="paypal" />
+      </div>
+
+      <div class="inline-input-group">
+        <label for="shop">ShopPay</label>
+        <input type="radio" name="payment" id="shop" />
+      </div>
+
+      <form action="confirmation.html" method="get" style="text-align: center;">
+        <button type="submit" style="
+          width: 90%;
+          padding: 1rem;
+          font-size: 2rem;
+          font-weight: bold;
+          background-color: white;
+          color: black;
+          cursor: pointer;
+          margin: 1rem auto;
+          display: block;
+        ">
+          Pay now
+        </button>
+      </form>
+      
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="checkout-right">
+      <div class="summary-item">
+        <img src="images/earing.jpeg" />
+        <div>
+          <p><strong>WINTER GRAPES</strong></p>
+          <p>$279.00</p>
+        </div>
+      </div>
+      <div class="summary-item">
+        <img src="images/bracelet.jpeg" />
+        <div>
+          <p><strong>DOUBLE GRAPE</strong></p>
+          <p>$190.00</p>
+        </div>
+      </div>
+      <div class="summary-totals">
+        <p><strong>Subtotal</strong> <span>$469.00</span></p>
+        <p><strong>Shipping</strong> <span>$0.00</span></p>
+        <h3>Total <span>$469.00</span></h3>
+      </div>
+    </div>
+  </div>
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const summaryContainer = document.querySelector('.checkout-right');
+    
     let total = 0;
     let html = "";
   
@@ -316,16 +315,9 @@
         <h3>Total <span>$${total.toFixed(2)}</span></h3>
       </div>
     `;
-
+  
     summaryContainer.innerHTML = html;
   </script>
   
 </body>
 </html>
-  
-
-
-
-
-
-  
