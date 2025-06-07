@@ -296,6 +296,21 @@
     let total = 0;
     let html = "";
   
+    cart.forEach(item => {
+      total += item.price * item.quantity;
+      html += `
+        <div class="summary-item">
+          <img src="${item.image}" />
+          <div>
+            <p><strong>${item.name}</strong></p>
+            <p>$${item.price.toFixed(2)} × ${item.quantity}</p>
+          </div>
+        </div>
+      `;
+    });
+  
+
+
 
 
   
