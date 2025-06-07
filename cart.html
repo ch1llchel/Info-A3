@@ -213,6 +213,14 @@
       
           document.getElementById("totalPrice").textContent = `$${total.toFixed(2)}`;
         }
+
+        function updateQuantity(index, value) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart[index].quantity = parseInt(value);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload();
+    }
+
       
     
 
