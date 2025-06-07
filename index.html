@@ -258,11 +258,14 @@ body {
 
   <!-- Logo and Header Section -->
   <div class="logo-section">
-    <button class="shop-all" onclick="location.href='shop.html'">SHOP ALL</button>
+    <button class="shop-all" onclick="location.href='shop all.html'">SHOP ALL</button>
     <img src="images/logo.png" alt="Melted Potato Logo" class="logo-img"/>
     <div class="top-right">
-      <input type="text" class="search-input" placeholder="Search..."/>
-      <img src="images/cart.jpeg" alt="Cart" class="cart-icon"/>
+      <input type="text" class="search-input" id="searchBox" placeholder="Search..."/>
+      <button onclick="handleSearch()" style="background: none; border: none; padding: 0;">
+        <img src="images/search.jpeg" alt="Search" style="height: 40px; width: 40px; cursor: pointer;" />
+      </button>      
+      <img src="images/cart.jpeg" alt="Cart" style="height: 35px; width: 35px; class="cart-icon" onclick="location.href='shopping cart.html'" />
       <select id="currency">
         <option value="AUD">AUD$ 🇦🇺</option>
         <option value="USD">USD$ 🇺🇸</option>
