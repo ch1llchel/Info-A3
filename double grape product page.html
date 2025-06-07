@@ -247,8 +247,6 @@
 </style>
 </head>
 
-
-
   <body>
 
     <div class="logo-container">
@@ -333,6 +331,14 @@
               <img src="images/ins icon.jpeg" alt="Instagram" class="footer-icon" />
             </div>
           </footer>
+
+          
+          <script>
+            function changeImage(imagePath) {
+              document.getElementById("main-display").src = imagePath;
+              document.querySelectorAll('.thumb').forEach(img => img.classList.remove('active'));
+              event.target.classList.add('active');
+            }
         
         
 
