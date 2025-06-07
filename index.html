@@ -251,43 +251,178 @@ body {
   object-fit: contain;
 }
 
- /* ✅ Add this working mobile fix */
- @media screen and (max-width: 480px) {
-      .collection-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-      }
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+    margin: 0;
+  }
 
-      .item {
-        max-width: 90%;
-        width: 100%;
-      }
+  /* === HEADER TOP SECTION === */
+  .logo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    gap: 10px;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-      .shop-btn {
-        font-size: 1.2rem;
-        padding: 0.8rem 1.5rem;
-        width: 100%;
-        max-width: 300px;
-      }
+  .shop-all {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    flex-shrink: 0;
+    height: auto;
+  }
 
-      .label {
-        font-size: 0.9rem;
-      }
+  .logo-img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
-      .logo-img {
-        width: 60%;
-        height: auto;
-      }
+  .top-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+  }
 
-      body {
-        overflow-x: hidden;
-        background-color: #fdfdfd;
-      }
-    }
+  .top-right input {
+    width: 75px;
+    font-size: 0.75rem;
+    padding: 0.3rem;
+  }
+
+  .top-right img,
+  .cart-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  #currency {
+    font-size: 0.7rem;
+    padding: 0.25rem;
+  }
+
+  .free-shipping {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+  }
+
+  /* === CATEGORY CIRCLES (SCROLLABLE) === */
+  .categories {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.8rem;
+    padding: 0.5rem 1rem;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+    background-color: #2a1e1e;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .cat {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cat img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+    padding: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .cat span {
+    font-size: 0.65rem;
+    color: white;
+    margin-top: 4px;
+  }
+
+  /* === COLLECTION GRID === */
+  .collection-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .item {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .shop-btn {
+    width: 100%;
+    max-width: 280px;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+  /* === MOBILE FOOTER FIX === */
+.footer-wrapper {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.footer-center {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.payment-strip {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-social {
+  position: static;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.footer-social p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.footer-icon {
+  width: 22px;
+  height: 22px;
+}
+
+}
+
   </style>
 </head>
-  </style>
+
   
   <body>
   <!-- Free Shipping Banner -->
