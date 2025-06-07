@@ -251,3 +251,35 @@
       <img src="images/ins icon.jpeg" alt="Instagram" class="footer-icon" />
     </div>
   </footer>
+
+  <!-- Search Function -->
+  <script>
+    function handleSearch() {
+      const query = document.getElementById("searchBox").value.toLowerCase().trim();
+
+      if (query.includes("ring")) {
+        window.location.href = "shop rings.html";
+      } else if (query.includes("earring")) {
+        window.location.href = "shop earrings.html";
+      } else if (query.includes("bracelet")) {
+        window.location.href = "shop bracelets.html";
+      } else if (query.includes("necklace")) {
+        window.location.href = "shop necklace.html";
+      } else if (query.includes("scarf") || query.includes("silky")) {
+        window.location.href = "silky grape product page.html";
+      } else if (query.includes("grape")) {
+        window.location.href = "shop grape potato.html";
+      } else if (query.includes("island")) {
+        window.location.href = "shop islander potato.html";
+      } else if (query.includes("crystal")) {
+        window.location.href = "shop crystal potato.html";
+      } else if (query.includes("winter")) {
+        window.location.href = "winter grape product page.html";
+      } else {
+        alert("No results found. Please try a different search term.");
+      }
+    }
+  </script>
+</body>
+</html>
+
