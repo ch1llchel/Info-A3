@@ -250,6 +250,43 @@ body {
   width: 24px;
   object-fit: contain;
 }
+
+ /* ✅ Add this working mobile fix */
+ @media screen and (max-width: 480px) {
+      .collection-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .item {
+        max-width: 90%;
+        width: 100%;
+      }
+
+      .shop-btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .label {
+        font-size: 0.9rem;
+      }
+
+      .logo-img {
+        width: 60%;
+        height: auto;
+      }
+
+      body {
+        overflow-x: hidden;
+        background-color: #fdfdfd;
+      }
+    }
+  </style>
+</head>
   </style>
   
   <body>
