@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Island Flower Ring</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #000;
+      background: white;
+    }
+
+    .shop-header {
+      width: 100%;
+    }
+
+    .top-bar {
+      background-color: #2a1e1e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .left, .center, .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .left {
+      justify-content: flex-start;
+    }
+
+    .center {
+      justify-content: center;
+    }
+
+    .right {
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    .nav-link {
+      color: white;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 1.3rem;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      max-width: 160px;
+      height: auto;
+      display: inline-block;
+    }
+
+    .search-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .search {
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .search-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .search-icon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .cart-icon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .currency {
+      font-weight: bold;
+      padding: 0.4rem;
+    }
+
+    .product-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .left-column {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .thumbnails {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .thumbnails img.thumb {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .thumbnails img.thumb.active {
+      border: 2px solid black;
+    }
+
+    .main-image img {
+      width: 700px;
+      height: 700px;
+      object-fit: contain;
+    }
+
+    .right-column {
+      flex: 1;
+      max-width: 800px;
+      align-self: flex-start;
+      padding-right: 0.5rem;
+    }
+
+    .product-title {
+      font-size: 35px;
+      font-style: italic;
+    }
+
+    .product-collection {
+      font-size: 25px;
+    }
+
+    .product-price {
+      font-size: 30px;
+      font-weight: bold;
+      padding-top: 3rem;
+    }
+
+    .add-to-cart {
+      width: 85%;
+      background-color: #2a1e1e;
+      color: white;
+      font-weight: bold;
+      padding: 1rem;
+      border: none;
+      font-size: 30px;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+
+    details summary {
+      font-style: italic;
+      cursor: pointer;
+      padding: 2rem 10;
+      font-size: 25px;
+    }
+
+    details p {
+      margin-left: 1rem;
+      font-size: 25px;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.8rem;
+      background: white;
+    }
+
+    .footer-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    .payment-strip {
+      height: 38px;
+      object-fit: contain;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin: 0;
+    }
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .footer-icon {
+      height: 24px;
+      width: 24px;
+      object-fit: contain;
+    }
+
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .popup-content button {
+      margin: 1rem;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border: none;
+      background-color: #2a1e1e;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="shop-header">
+  <div class="top-bar">
+    <div class="left">
+      <a href="index.html" class="nav-link">HOME</a>
+    </div>
+    <div class="center">
+      <img src="images/logo.png" alt="Melted Potato Logo" class="logo-img" />
+    </div>
+    <div class="right">
+      <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="Search..." class="search" />
+        <button class="search-btn" onclick="handleSearch()">
+          <img src="images/search2.jpeg" alt="Search" class="search-icon" />
+        </button>
+      </div>
+      <a href="cart.html">
+        <img src="images/whitecart.jpeg" class="cart-icon" alt="Cart" />
+      </a>
+      <select class="currency">
+        <option>AUD$</option>
+        <option>USD$</option>
+        <option>EUR€</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<main class="product-container">
+  <div class="left-column">
+    <div class="thumbnails">
+      <img src="images/islandflower1.jpeg" alt="Island Flower Ring" class="thumb active" onclick="changeImage('images/islandflower1.jpeg', event)" />
+      <img src="images/islandflower2.jpeg" alt="Island Flower Ring Worn" class="thumb" onclick="changeImage('images/islandflower2.jpeg', event)" />
+    </div>
+    <div class="main-image">
+      <img id="main-display" src="images/islandflower1.jpeg" alt="Island Flower Ring Large" />
+    </div>
+  </div>
+
+  <div class="right-column">
+    <h1 class="product-title">ISLAND FLOWER RING</h1>
+    <p class="product-collection">Collection: grape potato</p>
+    <p class="product-price">$159.00</p>
+    <button class="add-to-cart" onclick="addToCart()">ADD TO CART</button>
+
+    <div id="cartPopup" class="popup-overlay">
+      <div class="popup-content">
+        <p>Item added to cart!</p>
+        <button onclick="continueShopping()">Continue Shopping</button>
+        <button onclick="goToCart()">Go to Cart</button>
+      </div>
+    </div>
+
+    <details>
+      <summary><strong>DESCRIPTION</strong></summary>
+      <p>A blooming burst of coral island energy. This flower ring radiates joy through petal-shaped textures and pearlescent tones.</p>
+    </details>
+
+    <details>
+      <summary><strong>DIMENSIONS</strong></summary>
+      <p>Adjustable size<br>Flower diameter: approx. 2.5cm</p>
+    </details>
+
+    <details>
+      <summary><strong>MATERIALS</strong></summary>
+      <p>Resin, coated brass, freshwater pearl</p>
+    </details>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-center">
+      <img src="images/payment-icons.png" alt="Payment Methods" class="payment-strip" />
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025, MELTED POTATO PTE LTD ALL RIGHTS RESERVED</p>
+    </div>
+  </div>
+  <div class="footer-social">
+    <p><strong><em>FIND US ON:</em></strong></p>
+    <img src="images/ins icon.jpeg" alt="Instagram" class="footer-icon" />
+  </div>
+</footer>
+
+<script>
+  function changeImage(imagePath, event) {
+    document.getElementById("main-display").src = imagePath;
+    document.querySelectorAll('.thumb').forEach(img => img.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+
+  function handleSearch() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    if (query.includes("ring")) {
+      window.location.href = "shop rings.html";
+    } else if (query.includes("necklace")) {
+      window.location.href = "shop necklace.html";
+    } else if (query.includes("earring")) {
+      window.location.href = "shop earrings.html";
+    } else if (query.includes("bracelet")) {
+      window.location.href = "shop bracelets.html";
+    } else if (query.includes("grape")) {
+      window.location.href = "shop grape potato.html";
+    } else {
+      alert("No results found.");
+    }
+  }
+
+  function continueShopping() {
+    document.getElementById("cartPopup").style.display = "none";
+  }
+
+  function goToCart() {
+    window.location.href = "cart.html";
+  }
+
+  const product = {
+    name: "ISLAND FLOWER RING",
+    price: 159.00,
+    image: "images/islandflower1.jpeg",
+    quantity: 1
+  };
+
+  function addToCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingIndex = cart.findIndex(item => item.name === product.name);
+    if (existingIndex > -1) {
+      cart[existingIndex].quantity += 1;
+    } else {
+      cart.push(product);
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    document.getElementById("cartPopup").style.display = "flex";
+  }
+</script>
+
+</body>
+</html>
