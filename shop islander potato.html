@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grape Potato Collection - Melted Potato</title>
+  <title>Islander Potato Collection - Melted Potato</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -41,17 +41,10 @@
       border: 1px solid #ccc;
     }
 
-    .search-button {
-      background: none;
-      border: none;
+    .search-icon {
+      height: 28px;
+      width: 28px;
       cursor: pointer;
-      padding: 0;
-    }
-
-    .search-button img {
-      height: 26px;
-      width: 26px;
-      object-fit: contain;
     }
 
     .cart-icon {
@@ -190,10 +183,8 @@
   <header class="shop-header">
     <a href="index.html" class="nav-link">HOME</a>
     <div class="right">
-      <input type="text" id="searchInput" class="search" placeholder="Search..." />
-      <button class="search-button" onclick="handleSearch()">
-        <img src="images/search2.jpeg" alt="Search" />
-      </button>
+      <input type="text" class="search" id="searchBox" placeholder="Search..." />
+      <img src="images/search2.jpeg" class="search-icon" alt="Search" onclick="handleSearch()" />
       <a href="cart.html">
         <img src="images/whitecart.jpeg" class="cart-icon" alt="Cart" />
       </a>        
@@ -207,7 +198,7 @@
 
   <!-- Category Bar -->
   <div class="bottom-bar">
-    <a href="#" class="all-link">GRAPE POTATO</a>
+    <a href="#" class="all-link">ISLANDER POTATO</a>
   </div>
 
   <!-- Filters -->
@@ -220,34 +211,18 @@
     <div class="sort-section">
       <span>SORT BY:</span>
       <select><option>NEW TO OLD</option></select>
-      <span class="product-count">3 PRODUCTS</span>
+      <span class="product-count">1 PRODUCT</span>
     </div>
   </div>
 
   <!-- Product Grid -->
   <main class="shop-content">
     <div class="product-grid">
-      <a href="winter grape product page.html" class="product-link">
+      <a href="island flower product page.html" class="product-link">
         <div class="product">
-          <img src="images/earing.jpeg" alt="Winter Grape Earrings" />
-          <p class="name">WINTER GRAPE EARRINGS</p>
-          <p class="price">$279.00</p>
-        </div>
-      </a>
-
-      <a href="nice nice grape product page.html" class="product-link">
-        <div class="product">
-          <img src="images/necklace.jpeg" alt="Nice Nice Grape Necklace" />
-          <p class="name">NICE NICE GRAPE NECKLACE</p>
-          <p class="price">$120.00</p>
-        </div>
-      </a>
-
-      <a href="double grape product page.html" class="product-link">
-        <div class="product">
-          <img src="images/bracelet.jpeg" alt="Double Grape Bracelet" />
-          <p class="name">DOUBLE GRAPE BRACELET</p>
-          <p class="price">$190.00</p>
+          <img src="images/ring.jpeg" alt="Island Flower Ring" />
+          <p class="name">ISLAND FLOWER RING</p>
+          <p class="price">$159.00</p>
         </div>
       </a>
     </div>
@@ -272,7 +247,7 @@
   <!-- Search Script -->
   <script>
     function handleSearch() {
-      const query = document.getElementById("searchInput").value.toLowerCase().trim();
+      const query = document.getElementById("searchBox").value.toLowerCase().trim();
 
       if (query.includes("ring")) {
         window.location.href = "shop rings.html";
@@ -286,14 +261,12 @@
         window.location.href = "silky grape product page.html";
       } else if (query.includes("grape")) {
         window.location.href = "shop grape potato.html";
-      } else if (query.includes("island")) {
+      } else if (query.includes("island") || query.includes("islander")) {
         window.location.href = "shop islander potato.html";
       } else if (query.includes("crystal")) {
         window.location.href = "shop crystal potato.html";
-      } else if (query.includes("other")) {
-        window.location.href = "shop others.html";
-      } else if (query.includes("all")) {
-        window.location.href = "shop all.html";
+      } else if (query.includes("winter")) {
+        window.location.href = "winter grape product page.html";
       } else {
         alert("No results found. Please try a different search term.");
       }
