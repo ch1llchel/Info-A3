@@ -5,6 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Order Confirmed</title>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: black;
+      background-image: url("images/confirm.jpeg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5); /* optional: adds slight contrast over photo */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      height: 100px;
+    }
+
+    .logo {
+      height: 60px;
+      margin: 0 auto;
+    }
+
+    .home-btn {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    .centered-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 10vh;
+      text-align: center;
+      flex: 1;
+    }
+
+    .centered-content h1 {
+      font-size: 3rem;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 4rem;
+    }
+
+    .action-btn {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      font-style: italic;
+      font-size: 1.8rem;
+      padding: 1.2rem 4rem;
+      border: none;
+      margin: 1.5rem 0;
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      background-color: #333;
+    }
+
+    .footer-bottom{
+        color:black
+    }
+
+    .footer-social{
+        color:black
+    }
+
+
 
   <body>
     <div class="overlay">
