@@ -340,7 +340,24 @@
               event.target.classList.add('active');
             }
         
-        
+            function handleSearch() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      if (query.includes("ring")) {
+        window.location.href = "shop rings.html";
+      } else if (query.includes("necklace")) {
+        window.location.href = "shop necklace.html";
+      } else if (query.includes("earring")) {
+        window.location.href = "shop earrings.html";
+      } else if (query.includes("bracelet")) {
+        window.location.href = "shop bracelets.html";
+      } else if (query.includes("grape")) {
+        window.location.href = "shop grape potato.html";
+      } else {
+        alert("No results found.");
+      }
+    }
+
+
 
               
   
