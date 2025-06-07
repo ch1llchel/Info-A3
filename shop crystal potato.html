@@ -1,0 +1,283 @@
+shop crystal potato: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crystal Potato Collection - Melted Potato</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #000;
+    }
+
+    .shop-header {
+      background-color: #2a1e1e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-style: italic;
+      font-size: 1.3rem;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .search {
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .search-button {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .search-button img {
+      height: 24px;
+    }
+
+    .cart-icon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+
+    .currency {
+      font-weight: bold;
+      padding: 0.4rem;
+    }
+
+    .bottom-bar {
+      background-color: black;
+      width: 100vw;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      padding-left: 2rem;
+    }
+
+    .all-link {
+      font-size: 18px;
+      font-weight: bold;
+      font-style: italic;
+      color: white;
+      text-decoration: none;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      align-items: center;
+    }
+
+    .filter-section, .sort-section {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: bold;
+    }
+
+    .product-count {
+      color: grey;
+    }
+
+    .shop-content {
+      padding-bottom: 5rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 478px);
+      justify-content: center;
+      gap: 3rem;
+      padding: 2rem;
+    }
+
+    .product {
+      width: 478px;
+      height: 343px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 85%;
+      object-fit: contain;
+    }
+
+    .product .name {
+      font-weight: bold;
+      font-style: italic;
+      margin: 0.4rem 0 0;
+      font-size: 24px;
+    }
+
+    .product .price {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.8rem;
+      background: white;
+    }
+
+    .footer-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    .payment-strip {
+      height: 38px;
+      object-fit: contain;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin: 0;
+    }
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .footer-icon {
+      height: 24px;
+      width: 24px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="shop-header">
+    <a href="index.html" class="nav-link">HOME</a>
+    <div class="right">
+      <input type="text" class="search" id="searchBox" placeholder="Search..." />
+      <button onclick="handleSearch()" class="search-button">
+        <img src="images/search2.jpeg" alt="Search" />
+      </button>
+      <a href="cart.html">
+        <img src="images/whitecart.jpeg" class="cart-icon" alt="Cart" />
+      </a>        
+      <select class="currency">
+        <option>AUD$</option>
+        <option>USD$</option>
+        <option>EUR€</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Category Bar -->
+  <div class="bottom-bar">
+    <a href="#" class="all-link">CRYSTAL POTATO</a>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters">
+    <div class="filter-section">
+      <span>FILTER:</span>
+      <select><option>COLOUR</option></select>
+      <select><option>MATERIAL</option></select>
+    </div>
+    <div class="sort-section">
+      <span>SORT BY:</span>
+      <select><option>NEW TO OLD</option></select>
+      <span class="product-count">1 PRODUCT</span>
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  <main class="shop-content">
+    <div class="product-grid">
+      <a href="silky grape product page.html" class="product-link">
+        <div class="product">
+          <img src="images/silky1.jpeg" alt="Silky Grape Scarf" />
+          <p class="name">SILKY GRAPE SCARF</p>
+          <p class="price">$160.00</p>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-wrapper">
+      <div class="footer-center">
+        <img src="images/payment-icons.png" alt="Payment Methods" class="payment-strip" />
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025, MELTED POTATO PTE LTD ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+    <div class="footer-social">
+      <p><strong><em>FIND US ON:</em></strong></p>
+      <img src="images/ins icon.jpeg" alt="Instagram" class="footer-icon" />
+    </div>
+  </footer>
+
+  <!-- Search Function -->
+  <script>
+    function handleSearch() {
+      const query = document.getElementById("searchBox").value.toLowerCase().trim();
+
+      if (query.includes("ring")) {
+        window.location.href = "shop rings.html";
+      } else if (query.includes("earring")) {
+        window.location.href = "shop earrings.html";
+      } else if (query.includes("bracelet")) {
+        window.location.href = "shop bracelets.html";
+      } else if (query.includes("necklace")) {
+        window.location.href = "shop necklace.html";
+      } else if (query.includes("scarf") || query.includes("silky")) {
+        window.location.href = "silky grape product page.html";
+      } else if (query.includes("grape")) {
+        window.location.href = "shop grape potato.html";
+      } else if (query.includes("island")) {
+        window.location.href = "shop islander potato.html";
+      } else if (query.includes("crystal")) {
+        window.location.href = "shop crystal potato.html";
+      } else if (query.includes("winter")) {
+        window.location.href = "winter grape product page.html";
+      } else {
+        alert("No results found. Please try a different search term.");
+      }
+    }
+  </script>
+</body>
+</html>
