@@ -372,6 +372,22 @@
       quantity: 1
     };
 
+    function addToCart() {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const existingIndex = cart.findIndex(item => item.name === product.name);
+      if (existingIndex > -1) {
+        cart[existingIndex].quantity += 1;
+      } else {
+        cart.push(product);
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      document.getElementById("cartPopup").style.display = "flex";
+    }
+  </script>
+</body>
+</html>
 
 
 
