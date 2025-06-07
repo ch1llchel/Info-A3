@@ -154,12 +154,28 @@
       margin: 0.5rem 0;
     }
 
+  /* INLINE ALIGNMENT: label left, input right */
+  .inline-input-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0.6rem 0;
+    }
 
+    .inline-input-group label {
+      width: 250px;
+      font-size: 0.85rem;
+    }
 
+    .inline-input-group input[type="checkbox"],
+    .inline-input-group input[type="radio"] {
+      transform: scale(1.1);
+      margin-left: auto;
+    }
+  </style>
+</head>
 
-
-
-  <body>
+<body>
 
     <div class="top-bar">FREE EXPRESS SHIPPING</div>
   
