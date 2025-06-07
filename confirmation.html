@@ -140,6 +140,85 @@
   width: 24px;
   object-fit: contain;
 }
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  /* Header layout */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .home-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .logo {
+    height: 50px;
+    margin: 0;
+  }
+
+  /* Centered confirmation text */
+  .centered-content {
+    padding: 8vh 1rem;
+  }
+
+  .centered-content h1 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .action-btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* Footer fixes */
+  .footer-wrapper {
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer-center {
+    justify-content: center;
+  }
+
+  .payment-strip {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+
+  .footer-social {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
   </style>
 </head>
 
