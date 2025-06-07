@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+nicenice grape product: <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Island Flower Ring</title>
+  <title>Nice Nice Grape Necklace</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <style>
+/* your CSS stays the same as in your original */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -16,16 +17,12 @@ body {
   background: white;
 }
 
-.shop-header {
-  width: 100%;
-}
-
 .logo-container {
-  text-align: center;      
+  text-align: center;
 }
 
 .logo-img {
-  max-width: 200px;          
+  max-width: 200px;
   width: 100%;
   height: auto;
   display: inline-block;
@@ -195,6 +192,7 @@ details p {
   width: 24px;
   object-fit: contain;
 }
+
 .popup-overlay {
   display: none;
   position: fixed;
@@ -224,9 +222,9 @@ details p {
   color: white;
   cursor: pointer;
 }
-
 </style>
 
+<!-- LOGO + NAV -->
 <div class="logo-container">
   <img src="images/logo.png" alt="Melted Potato Logo" class="logo-img" />
 </div>
@@ -238,7 +236,7 @@ details p {
       <input type="text" placeholder="Search..." class="search" />
       <a href="cart.html">
         <img src="images/whitecart.jpeg" class="cart-icon" alt="Cart" />
-      </a>      
+      </a>
       <select class="currency">
         <option>AUD$</option>
         <option>USD$</option>
@@ -248,25 +246,24 @@ details p {
   </div>
 </header>
 
+<!-- MAIN PRODUCT -->
 <main class="product-container">
   <div class="left-column">
     <div class="thumbnails">
-      <img src="images/islandflower1.jpeg" alt="Island Flower Ring" class="thumb active" onclick="changeImage('images/islandflower1.jpeg')"/>
-      <img src="images/islandflower2.jpeg" alt="Island Flower Ring Worn" class="thumb" onclick="changeImage('images/islandflower2.jpeg')"/>
+      <img src="images/nicenice1.jpeg" alt="Nice Nice Grape Necklace Front" class="thumb active" onclick="changeImage('images/nicenice1.jpeg')"/>
+      <img src="images/nicenice2.jpeg" alt="Nice Nice Grape Necklace Worn" class="thumb" onclick="changeImage('images/nicenice2.jpeg')"/>
     </div>
     <div class="main-image">
-      <img id="main-display" src="images/islandflower1.jpeg" alt="Island Flower Ring Large"/>
+      <img id="main-display" src="images/nicenice1.jpeg" alt="Nice Nice Grape Necklace Large"/>
     </div>
   </div>
 
   <div class="right-column">
-    <h1 class="product-title">ISLAND FLOWER RING</h1>
-    <p class="product-collection">Collection: grape potato</p> 
-    <p class="product-price">$159.00</p>
+    <h1 class="product-title">NICE NICE GRAPE NECKLACE</h1>
+    <p class="product-collection">Collection: grape potato</p>
+    <p class="product-price">$329.00</p>
     <button class="add-to-cart" onclick="addToCart()">ADD TO CART</button>
 
-
-    <!-- Popup -->
     <div id="cartPopup" class="popup-overlay">
       <div class="popup-content">
         <p>Item added to cart!</p>
@@ -274,25 +271,23 @@ details p {
         <button onclick="goToCart()">Go to Cart</button>
       </div>
     </div>
-    
 
     <details>
       <summary><strong>DESCRIPTION</strong></summary>
-      <p>A blooming burst of coral island energy. This flower ring radiates joy through petal-shaped textures and pearlescent tones.</p>
+      <p>Playfully rich and dramatically fruity, the Nice Nice Grape Necklace is a bold statement of botanical elegance.</p>
     </details>
-    
     <details>
       <summary><strong>DIMENSIONS</strong></summary>
-      <p>Adjustable size<br>Flower diameter: approx. 2.5cm</p>
+      <p>Length: 42cm<br>Drop: 5cm</p>
     </details>
-
     <details>
       <summary><strong>MATERIALS</strong></summary>
-      <p>Resin, coated brass, freshwater pearl</p>
+      <p>Resin, stainless steel, silk thread</p>
     </details>
   </div>
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-wrapper">
     <div class="footer-center">
@@ -308,52 +303,47 @@ details p {
   </div>
 </footer>
 
+<!-- FUNCTIONAL SCRIPTS -->
 <script>
   function changeImage(imagePath) {
     document.getElementById("main-display").src = imagePath;
     document.querySelectorAll('.thumb').forEach(img => img.classList.remove('active'));
     event.target.classList.add('active');
   }
-</script>
 
-<script>
-    function showPopup() {
-      document.getElementById("cartPopup").style.display = "flex";
-    }
-  
-    function continueShopping() {
-      document.getElementById("cartPopup").style.display = "none";
-    }
-  
-    function goToCart() {
-      window.location.href = "cart.html";
-    }
-  </script>
-
-  <script>
-    const product = {
-      name: "ISLAND FLOWER RING", // change for each product
-      price: 159.00,                 // update this value
-      image: "images/islandflower1.jpeg", // correct image path
-      quantity: 1
-    };
-  
-    function addToCart() {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  const existingIndex = cart.findIndex(item => item.name === product.name);
-  if (existingIndex > -1) {
-    cart[existingIndex].quantity += 1;
-  } else {
-    cart.push(product);
+  function showPopup() {
+    document.getElementById("cartPopup").style.display = "flex";
   }
 
-  localStorage.setItem("cart", JSON.stringify(cart));
-  document.getElementById("cartPopup").style.display = "flex"; // Show popup
-}
+  function continueShopping() {
+    document.getElementById("cartPopup").style.display = "none";
+  }
 
-  </script>
-  
+  function goToCart() {
+    window.location.href = "cart.html";
+  }
+
+  function addToCart() {
+    const product = {
+      name: "NICE NICE GRAPE NECKLACE",
+      price: 329.00,
+      image: "images/nicenice1.jpeg",
+      quantity: 1
+    };
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingIndex = cart.findIndex(item => item.name === product.name);
+    if (existingIndex > -1) {
+      cart[existingIndex].quantity += 1;
+    } else {
+      cart.push(product);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    showPopup();
+  }
+</script>
 
 </body>
 </html>
