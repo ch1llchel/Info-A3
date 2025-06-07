@@ -274,4 +274,26 @@
   </footer>
 
 
+  <!-- JS -->
+  <script>
+    function handleSearch() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      if (query.includes("ring")) {
+        window.location.href = "ring-shop.html";
+      } else if (query.includes("necklace")) {
+        window.location.href = "necklace-shop.html";
+      } else if (query.includes("earring")) {
+        window.location.href = "earrings-shop.html";
+      } else if (query.includes("bracelet")) {
+        window.location.href = "bracelets-shop.html";
+      } else if (query.includes("other")) {
+        window.location.href = "other-shop.html";
+      } else {
+        alert("No results found.");
+      }
+    }
+  </script>
+</body>
+</html>
+
   
